@@ -37,8 +37,8 @@ if __name__ == '__main__':
     dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
     bus = dbus.SystemBus()
     obj = bus.get_object('org.bluez', "/")
-    mgr = dbus.Interface(obj, 'org.freedesktop.DBus.ObjectManager')
     player_iface = None
+    mgr = dbus.Interface(obj, 'org.freedesktop.DBus.ObjectManager')
     transport_prop_iface = None
     for path, ifaces in mgr.GetManagedObjects().items():
         if 'org.bluez.MediaPlayer1' in ifaces:
@@ -61,3 +61,4 @@ if __name__ == '__main__':
             dbus_interface='org.freedesktop.DBus.Properties')
     GLib.io_add_watch(sys.stdin, GLib.IO_IN, on_playback_control)
     GLib.MainLoop().run()
+
