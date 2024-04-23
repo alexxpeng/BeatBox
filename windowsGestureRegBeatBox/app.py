@@ -15,7 +15,6 @@ from utils import CvFpsCalc
 from model import KeyPointClassifier
 from model import PointHistoryClassifier
 
-import keyboard
 from pyKey import pressKey, releaseKey, press, sendSequence, showKeys
 
 def get_args():
@@ -178,7 +177,7 @@ def main():
                 finger_gesture_history.append(finger_gesture_id)
                 most_common_fg_id = Counter(
                     finger_gesture_history).most_common()
-                
+                """
                 if finger_gesture_id == 0: # stop gesture
                     newPauseFlag = 6
                     if (newPauseFlag != playPauseFlag):
@@ -199,7 +198,7 @@ def main():
                     if (newPauseFlag != playPauseFlag):
                         #press(key='F', sec=1) #play/pause
                         playPauseFlag = newPauseFlag
-                
+                """
 
                 # Drawing part
                 debug_image = draw_bounding_rect(use_brect, debug_image, brect)
