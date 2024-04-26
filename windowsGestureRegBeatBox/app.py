@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# based on demo from https://github.com/Kazuhito00/hand-gesture-recognition-using-mediapipe
+# used in combination with https://github.com/justinknguyen/BeatBind?tab=readme-ov-file
+
 import csv
 import copy
 import argparse

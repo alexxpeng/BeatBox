@@ -1,4 +1,5 @@
-# Importing Libraries
+#custom button functionality application
+# used in combination with https://github.com/justinknguyen/BeatBind?tab=readme-ov-file
 import serial
 import time
 from pyKey import pressKey, releaseKey, press, sendSequence, showKeys
